@@ -83,4 +83,3 @@ Dit project is vrij te gebruiken en aan te passen voor persoonlijke en educatiev
 ## Auteur
 
 - **micha de haan** - [GitHub profiel](https://github.com/MichadeHaan)
-```
