@@ -9,11 +9,10 @@ document.getElementById('taskForm').addEventListener('submit', function(e) {
     }
 });
 
-// Laad alle taken bij het laden van de pagina
 window.onload = loadTasks;
 
 function loadTasks() {
-    fetch('get_tasks.php')
+    fetch('./php/get_tasks.php')
         .then(response => response.json())
         .then(tasks => {
             tasks.forEach(task => {
@@ -27,7 +26,7 @@ function addTask(description) {
         description: description
     };
 
-    fetch('add_task.php', {
+    fetch('./php/add_task.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -60,7 +59,7 @@ function renderTask(task) {
 function toggleTask(id, checkbox) {
     let completed = checkbox.checked;
 
-    fetch('toggle_task.php', {
+    fetch('./php/toggle_task.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -81,7 +80,7 @@ function toggleTask(id, checkbox) {
 }
 
 function deleteTask(id) {
-    fetch('delete_task.php', {
+    fetch('./php/delete_task.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

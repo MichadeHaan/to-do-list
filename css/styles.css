@@ -60,7 +60,7 @@ li.completed {
 
 li.completed #del {
     text-decoration: none;
-  }
+}
 
 #del {
     width: 30%;
